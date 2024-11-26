@@ -106,12 +106,6 @@ trail_lifetime = 0.1
 position = Vector2(960, 536)
 script = ExtResource("2_iyhsy")
 
-[node name="Menu" parent="World/Camera2D" instance=ExtResource("3_8g6m1")]
-offset_left = -555.0
-offset_top = -365.0
-offset_right = -555.0
-offset_bottom = -365.0
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = -5
 
@@ -198,6 +192,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Menu" parent="TopLayer" instance=ExtResource("3_8g6m1")]
+anchors_preset = -1
+anchor_left = -0.00173611
+anchor_top = -1.00154
+anchor_right = 0.998264
+anchor_bottom = -0.00154312
+offset_left = 865.875
+offset_top = 675.957
+offset_right = 865.875
+offset_bottom = 675.957
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="RainSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_1cuyv")
