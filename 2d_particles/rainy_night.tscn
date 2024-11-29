@@ -199,10 +199,10 @@ anchor_left = -0.00173611
 anchor_top = -1.00154
 anchor_right = 0.998264
 anchor_bottom = -0.00154312
-offset_left = 865.875
-offset_top = 675.957
-offset_right = 865.875
-offset_bottom = 675.957
+offset_left = -35.125
+offset_top = 829.957
+offset_right = -35.125
+offset_bottom = 829.957
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
