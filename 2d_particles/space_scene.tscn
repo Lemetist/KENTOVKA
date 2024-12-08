@@ -1,6 +1,5 @@
-[gd_scene load_steps=19 format=3 uid="uid://cylxgwcsd1q2y"]
+[gd_scene load_steps=18 format=3 uid="uid://cylxgwcsd1q2y"]
 
-[ext_resource type="Texture2D" uid="uid://g0bii467ocxd" path="res://shared/background.png" id="1_t335h"]
 [ext_resource type="Texture2D" uid="uid://br2d4y3exij0l" path="res://2d_particles/assets/enemy.png" id="2_04rpa"]
 [ext_resource type="Texture2D" uid="uid://b8w4oq2qd5rap" path="res://2d_particles/assets/blackhole.png" id="2_8qdx5"]
 [ext_resource type="Script" path="res://2d_particles/ship.gd" id="2_ib6sl"]
@@ -213,7 +212,6 @@ _data = {
 [node name="SpaceScene" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-texture = ExtResource("1_t335h")
 centered = false
 
 [node name="Blackhole" type="Sprite2D" parent="Background"]
@@ -222,10 +220,10 @@ scale = Vector2(1.59322, 1.59322)
 texture = ExtResource("2_8qdx5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Blackhole"]
-autoplay = "rotate"
 libraries = {
 "": SubResource("AnimationLibrary_4w8ls")
 }
+autoplay = "rotate"
 
 [node name="Planet" type="Sprite2D" parent="Background"]
 position = Vector2(222, 292)
@@ -276,7 +274,7 @@ trail_sections = 2
 trail_section_subdivisions = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "move"
 libraries = {
 "": SubResource("AnimationLibrary_6b2dh")
 }
+autoplay = "move"

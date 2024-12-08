@@ -1,0 +1,35 @@
+[gd_scene load_steps=11 format=3 uid="uid://yp1jhf5ejjod"]
+
+[ext_resource type="Script" path="res://dialoge_scane.gd" id="1_3fpqr"]
+[ext_resource type="Texture2D" uid="uid://cc5s4ruga5g1t" path="res://1.png" id="1_m88fa"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_b0hby"]
+[ext_resource type="Resource" uid="uid://djt7nnlbfqgor" path="res://1.tres" id="3_d1mto"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_dfsex"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_uqp0d"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_ox5el"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_s54g2"]
+script = ExtResource("3_dfsex")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_ig31u"]
+script = ExtResource("4_uqp0d")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_7yp18"]
+script = ExtResource("5_ox5el")
+
+[node name="DialogeScane" type="Node2D"]
+script = ExtResource("1_3fpqr")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(224, 192)
+texture = ExtResource("1_m88fa")
+
+[node name="DialogueBox" type="Panel" parent="."]
+offset_left = 387.0
+offset_top = 21.0
+offset_right = 1078.0
+offset_bottom = 170.0
+script = ExtResource("2_b0hby")
+data = ExtResource("3_d1mto")
+start_id = "Test"
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_s54g2"), SubResource("RichTextEffect_ig31u"), SubResource("RichTextEffect_7yp18")])

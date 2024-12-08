@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4to1ftan3t8b"]
+[gd_scene load_steps=9 format=3 uid="uid://c4to1ftan3t8b"]
 
 [ext_resource type="Script" path="res://2d_particles/menu.gd" id="1_rn2lv"]
+[ext_resource type="Texture2D" uid="uid://b6kf1xfm0k2a4" path="res://photo_2024-12-04_20-28-51.png" id="2_7ad2g"]
 [ext_resource type="FontFile" uid="uid://c02xnuid33bdq" path="res://Fonts/Kenney Mini.ttf" id="2_kl8hq"]
-[ext_resource type="Texture2D" uid="uid://b0drb3q2wxqrr" path="res://sprite/123124.png" id="3_cywkj"]
-[ext_resource type="Texture2D" uid="uid://ney8nvupqa66" path="res://sprite/1231214.png" id="4_43sol"]
-[ext_resource type="Texture2D" uid="uid://d3xxpmtncct1r" path="res://sprite/12313414.png" id="5_ije0j"]
+[ext_resource type="Texture2D" uid="uid://dw60yg2pell56" path="res://sprite/new game.png" id="4_tluht"]
+[ext_resource type="Texture2D" uid="uid://dhfxamup2jpky" path="res://sprite/continue.png" id="5_jgxq3"]
+[ext_resource type="Texture2D" uid="uid://bepad40cpxdow" path="res://sprite/setting.png" id="6_uaxxb"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tnvrg"]
+polygon = PackedVector2Array(-368, 336, -357, 100, -340, 63, -334, 30, -266, -22, -139, -67, -184, -128, -198, -216, -173, -289, -127, -341, 13, -350, 74, -347, 124, -311, 144, -271, 153, -203, 129, -115, 95, -78, 156, -56, 260, -2, 324, 52, 352, 135, 368, 244, 382, 343)
 
 [sub_resource type="Theme" id="Theme_h65q3"]
 
@@ -31,18 +35,28 @@ offset_bottom = -140.0
 grow_vertical = 0
 pivot_offset = Vector2(23, 0)
 
+[node name="Container" type="Container" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Photo2024-12-0420-28-51" type="Sprite2D" parent="VBoxContainer/Container"]
+position = Vector2(1345, 528)
+texture = ExtResource("2_7ad2g")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="VBoxContainer/Container/Photo2024-12-0420-28-51"]
+occluder = SubResource("OccluderPolygon2D_tnvrg")
+
 [node name="start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_kl8hq")
 theme_override_font_sizes/font_size = 22
-icon = ExtResource("3_cywkj")
+icon = ExtResource("4_tluht")
 flat = true
 
 [node name="options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_kl8hq")
 theme_override_font_sizes/font_size = 22
-icon = ExtResource("4_43sol")
+icon = ExtResource("5_jgxq3")
 flat = true
 
 [node name="quit" type="Button" parent="VBoxContainer"]
@@ -50,7 +64,7 @@ layout_mode = 2
 theme = SubResource("Theme_h65q3")
 theme_override_fonts/font = ExtResource("2_kl8hq")
 theme_override_font_sizes/font_size = 22
-icon = ExtResource("5_ije0j")
+icon = ExtResource("6_uaxxb")
 flat = true
 
 [connection signal="button_up" from="VBoxContainer/start" to="." method="_on_start_button_up"]
