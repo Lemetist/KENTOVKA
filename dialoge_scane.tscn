@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://yp1jhf5ejjod"]
+[gd_scene load_steps=11 format=3 uid="uid://yp1jhf5ejjod"]
 
 [ext_resource type="Script" path="res://dialoge_scane.gd" id="1_3fpqr"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_b0hby"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_dfsex"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_uqp0d"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_ox5el"]
+[ext_resource type="AudioStream" uid="uid://b1g1mblb2yi5l" path="res://voice.ogg" id="7_fgksm"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_s54g2"]
 script = ExtResource("3_dfsex")
@@ -20,11 +21,15 @@ script = ExtResource("5_ox5el")
 script = ExtResource("1_3fpqr")
 
 [node name="DialogueBox" type="Panel" parent="."]
-offset_left = 250.0
-offset_top = -1.0
-offset_right = 1020.0
-offset_bottom = 144.0
+offset_left = 108.0
+offset_top = 429.0
+offset_right = 953.0
+offset_bottom = 745.0
 script = ExtResource("2_b0hby")
 data = ExtResource("3_d1mto")
 start_id = "Test"
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_s54g2"), SubResource("RichTextEffect_ig31u"), SubResource("RichTextEffect_7yp18")])
+options_position = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_fgksm")

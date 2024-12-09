@@ -35,14 +35,11 @@ offset_bottom = -140.0
 grow_vertical = 0
 pivot_offset = Vector2(23, 0)
 
-[node name="Container" type="Container" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="Photo2024-12-0420-28-51" type="Sprite2D" parent="VBoxContainer/Container"]
+[node name="Photo2024-12-0420-28-51" type="Sprite2D" parent="VBoxContainer"]
 position = Vector2(1345, 528)
 texture = ExtResource("2_7ad2g")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="VBoxContainer/Container/Photo2024-12-0420-28-51"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="VBoxContainer/Photo2024-12-0420-28-51"]
 occluder = SubResource("OccluderPolygon2D_tnvrg")
 
 [node name="start" type="Button" parent="VBoxContainer"]

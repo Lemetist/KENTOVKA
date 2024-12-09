@@ -193,19 +193,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Menu" parent="TopLayer" instance=ExtResource("3_8g6m1")]
-anchors_preset = -1
-anchor_left = -0.00173611
-anchor_top = -1.00154
-anchor_right = 0.998264
-anchor_bottom = -0.00154312
-offset_left = -35.125
-offset_top = 829.957
-offset_right = -35.125
-offset_bottom = 829.957
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
 [node name="RainSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_1cuyv")
 autoplay = true
@@ -216,3 +203,16 @@ script = ExtResource("5_cl44u")
 sounds = Array[AudioStream]([ExtResource("6_3sgfq"), ExtResource("7_fvilx"), ExtResource("8_2e2qv")])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="Menu" parent="." instance=ExtResource("3_8g6m1")]
+light_mask = 0
+visibility_layer = 8
+anchors_preset = -1
+anchor_left = -0.00173611
+anchor_top = -1.00154
+anchor_right = 0.998264
+anchor_bottom = -0.00154312
+offset_left = -35.125
+offset_top = 829.957
+offset_right = -35.125
+offset_bottom = 829.958

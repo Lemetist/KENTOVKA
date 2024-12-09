@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterList" load_steps=7 format=3 uid="uid://bxqav4gip4x1u"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_kho5b"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_h47so"]
+[ext_resource type="Texture2D" uid="uid://b6kf1xfm0k2a4" path="res://photo_2024-12-04_20-28-51.png" id="3_05j32"]
+
+[sub_resource type="Resource" id="Resource_pllr2"]
+script = ExtResource("1_kho5b")
+name = "Kentovka"
+image = ExtResource("3_05j32")
+color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_wipvp"]
+script = ExtResource("1_kho5b")
+name = ""
+color = Color(1, 1, 1, 1)
+
+[sub_resource type="Resource" id="Resource_2rix8"]
+script = ExtResource("1_kho5b")
+name = "Рассказчик "
+color = Color(1, 1, 1, 1)
+
+[resource]
+script = ExtResource("2_h47so")
+characters = Array[ExtResource("1_kho5b")]([SubResource("Resource_pllr2"), SubResource("Resource_wipvp"), SubResource("Resource_2rix8")])
