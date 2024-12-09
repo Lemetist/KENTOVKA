@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://yp1jhf5ejjod"]
+[gd_scene load_steps=10 format=3 uid="uid://yp1jhf5ejjod"]
 
 [ext_resource type="Script" path="res://dialoge_scane.gd" id="1_3fpqr"]
-[ext_resource type="Texture2D" uid="uid://cc5s4ruga5g1t" path="res://1.png" id="1_m88fa"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_b0hby"]
 [ext_resource type="Resource" uid="uid://djt7nnlbfqgor" path="res://1.tres" id="3_d1mto"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_dfsex"]
@@ -20,15 +19,11 @@ script = ExtResource("5_ox5el")
 [node name="DialogeScane" type="Node2D"]
 script = ExtResource("1_3fpqr")
 
-[node name="1" type="Sprite2D" parent="."]
-position = Vector2(224, 192)
-texture = ExtResource("1_m88fa")
-
 [node name="DialogueBox" type="Panel" parent="."]
-offset_left = 387.0
-offset_top = 21.0
-offset_right = 1078.0
-offset_bottom = 170.0
+offset_left = 250.0
+offset_top = -1.0
+offset_right = 1020.0
+offset_bottom = 144.0
 script = ExtResource("2_b0hby")
 data = ExtResource("3_d1mto")
 start_id = "Test"

@@ -19,14 +19,27 @@ nodes = {
 "options": {
 0: {
 "condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_2": {
+"dialogue": "Нормально, а у тебя",
+"offset": Vector2(760, -100),
+"options": {
+0: {
+"condition": {},
 "link": "END",
 "text": ""
 }
 },
 "size": Vector2(300, 240),
-"speaker": ""
+"speaker": 1
 }
 }
 variables = {}
 strays = Array[String]([])
-characters = ""
+characters = "res://new_resource.tres"
