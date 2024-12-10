@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://yp1jhf5ejjod"]
+[gd_scene load_steps=12 format=3 uid="uid://yp1jhf5ejjod"]
 
 [ext_resource type="Script" path="res://dialoge_scane.gd" id="1_3fpqr"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_b0hby"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_uqp0d"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_ox5el"]
 [ext_resource type="AudioStream" uid="uid://b1g1mblb2yi5l" path="res://voice.ogg" id="7_fgksm"]
+[ext_resource type="Texture2D" uid="uid://cd5qf4hj3iato" path="res://scale_1200.jpg-autosave.png" id="8_01db7"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_s54g2"]
 script = ExtResource("3_dfsex")
@@ -20,11 +21,20 @@ script = ExtResource("5_ox5el")
 [node name="DialogeScane" type="Node2D"]
 script = ExtResource("1_3fpqr")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(941, 172)
+scale = Vector2(-0.00478632, 0.366575)
+
+[node name="Scale1200_jpg-autosave" type="Sprite2D" parent="."]
+position = Vector2(459, 164)
+texture = ExtResource("8_01db7")
+
 [node name="DialogueBox" type="Panel" parent="."]
-offset_left = 108.0
-offset_top = 429.0
-offset_right = 953.0
-offset_bottom = 745.0
+visible = false
+offset_left = 931.0
+offset_top = -116.0
+offset_right = 1782.0
+offset_bottom = 88.0
 script = ExtResource("2_b0hby")
 data = ExtResource("3_d1mto")
 start_id = "Test"

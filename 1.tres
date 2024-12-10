@@ -14,7 +14,8 @@ nodes = {
 "start_id": "Test"
 },
 "1_1": {
-"dialogue": "Спустя несколько лет после распада \"Kentovka\", Юрка получает загадочное сообщение на свой компьютер. На экране появляется проекция силуэта “Кентовки Лидера”, который, вопреки известиям о его смерти, выходит на связь (НО ЭТО ДОЛЖНО БЫТЬ ПОХОЖЕ НА ЗАПИСЬ, А НЕ ЖИВОЕ ОБЩЕНИЕ). В нем он ободряет Юрку и призывает его продолжить дело организации, сообщая, что угроза, уничтожившая \"Kentovky\", все еще существует. Лидер дает Юрке ряд задач, которые необходимо выполнить, чтобы восстановить организацию и раскрыть правду о его смерти.",
+"dialogue": "
+",
 "offset": Vector2(640, -20),
 "options": {
 0: {
@@ -32,7 +33,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"1_4",
 "text": ""
 }
 },
@@ -57,8 +58,70 @@ nodes = {
 },
 "size": Vector2(300, 240),
 "speaker": 2
+},
+"1_4": {
+"dialogue": "выбери пункты
+",
+"offset": Vector2(1690.86, 109.273),
+"options": {
+0: {
+"condition": {},
+"link": &"4_1",
+"text": "23"
+},
+1: {
+"condition": {},
+"link": &"4_2",
+"text": "123"
+},
+2: {
+"condition": {},
+"link": &"4_3",
+"text": "3123"
+},
+3: {
+"condition": {},
+"link": &"4_4",
+"text": "312"
+}
+},
+"size": Vector2(300, 290),
+"speaker": 2
+},
+"4_1": {
+"link": "END",
+"offset": Vector2(2280, 260),
+"type": 0,
+"value": "23",
+"variable": "coin"
+},
+"4_2": {
+"link": "END",
+"offset": Vector2(2280, 380),
+"type": 0,
+"value": "123",
+"variable": "coin"
+},
+"4_3": {
+"link": "END",
+"offset": Vector2(2240, 540),
+"type": 0,
+"value": "3123",
+"variable": "coin"
+},
+"4_4": {
+"link": "END",
+"offset": Vector2(2060, 620),
+"type": 0,
+"value": "312",
+"variable": "coin"
 }
 }
-variables = {}
+variables = {
+"coin": {
+"type": 4,
+"value": "100"
+}
+}
 strays = Array[String]([])
 characters = "res://Characters.tres"
