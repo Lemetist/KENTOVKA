@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://8m7h0ffvx08u"]
+[gd_scene load_steps=27 format=3 uid="uid://8m7h0ffvx08u"]
 
 [ext_resource type="Script" path="res://2d_particles/rainy_night.gd" id="1_p3avv"]
 [ext_resource type="Material" uid="uid://d3y7erh2blmo" path="res://2d_particles/2d_sky/2d_sky_mat.tres" id="1_ypwdv"]
@@ -13,7 +13,7 @@
 [ext_resource type="Shader" path="res://2d_particles/shaders/top_clouds.gdshader" id="6_sglpv"]
 [ext_resource type="AudioStream" uid="uid://c1di7ydo6xhqo" path="res://2d_particles/assets/sounds/lightning_strike_02.ogg" id="7_fvilx"]
 [ext_resource type="AudioStream" uid="uid://bvvhl8vvw70bu" path="res://2d_particles/assets/sounds/lightning_strike_03.ogg" id="8_2e2qv"]
-[ext_resource type="Shader" path="res://2d_particles/shaders/glow.gdshader" id="8_fojyx"]
+[ext_resource type="Texture2D" uid="uid://b6kf1xfm0k2a4" path="res://photo_2024-12-04_20-28-51.png" id="9_drn3a"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_urv10"]
 particle_flag_disable_z = true
@@ -78,9 +78,6 @@ shader_parameter/base_scale = 0.25
 shader_parameter/noise_sampler = SubResource("NoiseTexture2D_njuc7")
 shader_parameter/noise_small_sampler = SubResource("NoiseTexture2D_ajddh")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iiw28"]
-shader = ExtResource("8_fojyx")
-
 [node name="RainyNight" type="Node"]
 script = ExtResource("1_p3avv")
 
@@ -126,6 +123,10 @@ motion_scale = Vector2(0.8, 0.871)
 position = Vector2(982, 960.25)
 scale = Vector2(1.1, 1.1)
 texture = ExtResource("5_awb0c")
+
+[node name="Photo2024-12-0420-28-51" type="Sprite2D" parent="ParallaxBackground/FrontHill"]
+position = Vector2(1352, 744)
+texture = ExtResource("9_drn3a")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.9, 0.98)
@@ -185,14 +186,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0)
 
-[node name="Glow" type="ColorRect" parent="TopLayer"]
-material = SubResource("ShaderMaterial_iiw28")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="RainSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_1cuyv")
 autoplay = true
@@ -202,11 +195,9 @@ unique_name_in_owner = true
 script = ExtResource("5_cl44u")
 sounds = Array[AudioStream]([ExtResource("6_3sgfq"), ExtResource("7_fvilx"), ExtResource("8_2e2qv")])
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-
 [node name="Menu" parent="." instance=ExtResource("3_8g6m1")]
-light_mask = 0
-visibility_layer = 8
+light_mask = 16
+visibility_layer = 16
 anchors_preset = -1
 anchor_left = -0.00173611
 anchor_top = -1.00154
@@ -216,3 +207,5 @@ offset_left = -35.125
 offset_top = 829.957
 offset_right = -35.125
 offset_bottom = 829.958
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
